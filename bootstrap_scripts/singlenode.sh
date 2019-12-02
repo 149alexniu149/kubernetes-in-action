@@ -17,3 +17,6 @@ docker run hello-world
 systemctl enable docker
 
 docker build -t kubia ../ -f ../Dockerfile
+
+curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.23.0/minikube-darwin-amd64 && chmod +x minikube && su
+do mv minikube /usr/local/bin/
