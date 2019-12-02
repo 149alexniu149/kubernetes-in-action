@@ -23,3 +23,5 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/v0.23.0/minik
 minikube start --vm-driver=none
 
 curl -LO https://storage.googleapis.com/kubernetes-release/release/$(curl -s https://storage.googleapis.com/kubernetes-release/release/stable.txt)/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/bin/
+
+kubectl run kubia --image=alexniu149/kubia --port=8080 --generator=run/v1
