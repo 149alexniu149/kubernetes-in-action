@@ -1,5 +1,7 @@
 #/bin/bash
 
+nmcli conn up $(nmcli conn show | awk 'NR > 1 {print $1}')
+
 yum update -y
 
 tee /etc/yum.repos.d/docker.repo <<-'EOF'
