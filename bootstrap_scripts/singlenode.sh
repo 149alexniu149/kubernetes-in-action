@@ -1,4 +1,4 @@
-#!/bin/bash
+#/bin/bash
 
 yum update -y
 
@@ -16,3 +16,4 @@ service docker start
 docker run hello-world
 systemctl enable docker
 
+docker build -t kubia ../ -f ../Dockerfile
