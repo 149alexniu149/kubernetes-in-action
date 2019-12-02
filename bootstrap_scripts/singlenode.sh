@@ -27,3 +27,5 @@ minikube start --vm-driver=none
 curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.8.7/bin/linux/amd64/kubectl && chmod +x kubectl && sudo mv kubectl /usr/bin/
 
 kubectl run kubia --image=alexniu149/kubia --port=8080 --generator=run/v1
+
+kubectl expose rc kubia --type=LoadBalancer --name kubia-http
