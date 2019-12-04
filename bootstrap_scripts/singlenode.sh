@@ -29,3 +29,6 @@ curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.8.7/bin/li
 kubectl run kubia --image=alexniu149/kubia --port=8080 --generator=run/v1
 kubectl expose rc kubia --type=LoadBalancer --name kubia-http
 kubectl scale rc kubia --replicas=3
+
+kubectl create -f ../yaml/kubia-manual.yaml
+kubectl create -f ../yaml/kubia-manual-with-labels.yaml
